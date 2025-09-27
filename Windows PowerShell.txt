@@ -1,0 +1,37 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Deshawn> py
+Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> def caesar(text, shift, encrypt=True):
+...
+...     if not isinstance(shift, int):
+...         return 'Shift must be an integer value.'
+...
+...     if shift < 1 or shift > 25:
+...         return 'Shift must be an integer between 1 and 25.'
+...
+...     alphabet = 'abcdefghijklmnopqrstuvwxyz'
+...
+...     if not encrypt:
+...         shift = - shift
+...
+...     shifted_alphabet = alphabet[shift:] + alphabet[:shift]
+...     translation_table = str.maketrans(alphabet + alphabet.upper(), shifted_alphabet + shifted_alphabet.upper())
+...     encrypted_text = text.translate(translation_table)
+...     return encrypted_text
+...
+... def encrypt(text, shift):
+...     return caesar(text, shift)
+...
+... def decrypt(text, shift):
+...     return caesar(text, shift, encrypt=False)
+... encrypted_text = 'Pbhentr vf sbhaq va hayvxryl cynprf.'
+... decrypted_text = decrypt(encrypted_text, 13)
+... print(decrypted_text)
+...
+Courage is found in unlikely places.
+>>>
